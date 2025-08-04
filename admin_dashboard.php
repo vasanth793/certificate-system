@@ -46,7 +46,7 @@ QRcode::png($cert_url, $qr_file, QR_ECLEVEL_L, 4);
 
     <h2>✅ Welcome, Admin!</h2>
 
-    <p><a href="certificate_form.html">📝 Generate Certificate</a></p>
+    <p><a href="generate_certificate.php">📝 Generate Certificate</a></p>
     <p><a href="logout.php">🚪 Logout</a></p>
 
     <h3>🔗 Your Latest Generated QR</h3>
