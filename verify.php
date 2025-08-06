@@ -31,43 +31,63 @@ $conn->close();
 <html>
 <head>
     <title>Certificate Verification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Mobile Responsive -->
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            padding-top: 50px;
-            background-color: #f5f5f5;
+            padding: 20px;
+            margin: 0;
+            background-color: #e0f7ff; /* Sky Blue background */
         }
+
         .valid, .invalid, .warning {
-            font-size: 20px;
-            padding: 10px;
+            font-size: 18px;
+            padding: 12px;
             border-radius: 8px;
-            width: 60%;
-            margin: 0 auto 20px;
+            max-width: 500px;
+            margin: 20px auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .valid {
-            background-color: #d4edda;
-            color: #155724;
+            background-color: #c0f3e2;
+            color: #065f46;
         }
+
         .invalid {
-            background-color: #f8d7da;
-            color: #721c24;
+            background-color: #ffd6d6;
+            color: #a10000;
         }
+
         .warning {
             background-color: #fff3cd;
             color: #856404;
         }
+
         .details {
-            background-color: white;
+            background-color: #ffffff;
             padding: 20px;
-            border-radius: 8px;
-            width: 60%;
-            margin: 0 auto;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+
         .details p {
-            font-size: 18px;
+            font-size: 16px;
             margin: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            .valid, .invalid, .warning, .details {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .details p {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
