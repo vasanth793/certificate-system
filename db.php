@@ -4,6 +4,7 @@ $user = "root";
 $pass = "";
 $dbname = "certificate_system";
 
+
 // Create connection
 $conn = new mysqli($host, $user, $pass, $dbname);
 
