@@ -47,32 +47,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Admin Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important for mobile -->
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             background: #e0f7fa;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
+
         .register-box {
             background: white;
             padding: 30px;
             border-radius: 10px;
-            width: 350px;
+            width: 100%;
+            max-width: 400px;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
         input[type="text"], input[type="email"], input[type="password"] {
             width: 100%;
-            padding: 10px;
-            margin: 8px 0;
+            padding: 12px;
+            margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 6px;
+            font-size: 16px;
         }
+
         button {
             width: 100%;
             padding: 12px;
@@ -81,16 +100,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             color: white;
             font-weight: bold;
             border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
         }
+
+        button:hover {
+            background: #0277bd;
+        }
+
         .message {
             margin: 10px 0;
             font-weight: bold;
+            text-align: center;
         }
+
         .success {
             color: green;
         }
+
         .error {
             color: red;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        a {
+            color: #0288d1;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 500px) {
+            .register-box {
+                padding: 20px;
+            }
+
+            input, button {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -113,9 +167,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit">Register</button>
     </form>
     <p>
-    Already have an account? <a href="admin_login.php">Login here</a>
-</p>
-
+        Already have an account? <a href="admin_login.php">Login here</a>
+    </p>
 </div>
 
 </body>

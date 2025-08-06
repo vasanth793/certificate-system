@@ -45,41 +45,50 @@ if (isset($_POST['generate'])) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Generate Certificate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
-            background-color: #e6f2ff; /* Light sky blue */
+            background-color: #e6f2ff;
             margin: 0;
             padding: 0;
         }
         .container {
-            max-width: 450px;
+            max-width: 500px;
             margin: 30px auto;
-            background-color: #ffffff;
-            padding: 20px;
+            background-color: #fff;
+            padding: 25px;
             border-radius: 12px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         h2 {
             text-align: center;
-            color: #007acc; /* Sky blue */
+            color: #007acc;
+            margin-bottom: 25px;
+            font-size: 22px;
         }
         label {
             font-weight: bold;
             display: block;
             margin-bottom: 6px;
+            font-size: 15px;
         }
-        input[type="text"], input[type="date"] {
+        input[type="text"],
+        input[type="date"] {
             width: 100%;
-            padding: 10px;
+            padding: 10px 12px;
             border: 1px solid #ccc;
             border-radius: 6px;
             margin-bottom: 15px;
+            font-size: 15px;
         }
         button {
             background-color: #00aaff;
@@ -90,6 +99,7 @@ if (isset($_POST['generate'])) {
             width: 100%;
             font-size: 16px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         button:hover {
             background-color: #007acc;
@@ -97,20 +107,36 @@ if (isset($_POST['generate'])) {
         .result {
             margin-top: 20px;
             text-align: center;
+            font-size: 15px;
         }
         .qr img {
             margin-top: 10px;
+            max-width: 100%;
+            height: auto;
         }
         a {
             color: #007acc;
             text-decoration: none;
+            font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
         }
-        @media screen and (max-width: 480px) {
+
+        /* Responsive tweaks */
+        @media (max-width: 480px) {
             .container {
-                margin: 20px;
+                margin: 20px 10px;
+                padding: 20px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            label,
+            input,
+            button,
+            .result {
+                font-size: 14px;
             }
         }
     </style>
